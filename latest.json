@@ -1,11 +1,11 @@
 {
-  "version": "0.11.0",
-  "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.0/ShortformForever-Setup-0.11.0.exe",
-  "sha256": "0513e5d3c990f7790d348159210c58498cb7cf746edda2d30403fd177ba2d5ca",
-  "notes": "v0.11.0: licensing seam + license panel, portable zip distribution, update feed, TikTok-pane back button, sync stale-ingest/subframe fixes",
+  "version": "0.11.1",
+  "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.1/ShortformForever-Setup-0.11.1.exe",
+  "sha256": "3d98bc9e8941cc3c465baa3a8f69029f1a4463c445001b10eed00b4d21d383e8",
+  "notes": "v0.11.1: fixes the packaged app self-reporting a stale version (perpetual update-available nag)",
   "page": "https://jawned.github.io/shortform-forever-site/",
   "portable": {
-    "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.0/ShortformForever-Portable-0.11.0.zip",
-    "sha256": "1b7ae6ff8905420a63f6aa10a431e553671d135625b550398c61f0b9af4d5898"
+    "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.1/ShortformForever-Portable-0.11.1.zip",
+    "sha256": "ba314ca634f2a4845e3643f3fef589153b49bfd720d266e773bb91ddb04bd463"
   }
 }
