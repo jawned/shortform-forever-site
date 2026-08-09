@@ -1,7 +1,7 @@
 {
   "version": "0.11.1",
   "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.1/ShortformForever-Setup-0.11.1.exe",
-  "sha256": "3d98bc9e8941cc3c465baa3a8f69029f1a4463c445001b10eed00b4d21d383e8",
+  "sha256": "c73f6223b53e27d09559e4a2f19c44975adc9ece4f43a10b291e3695b3c70689",
   "notes": "v0.11.1: fixes the packaged app self-reporting a stale version (perpetual update-available nag)",
   "page": "https://jawned.github.io/shortform-forever-site/",
   "portable": {
