@@ -1,11 +1,11 @@
 {
   "version": "0.11.2",
   "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.2/ShortformForever-Setup-0.11.2.exe",
-  "sha256": "3476443b299fd0cabf5fd1710b01556cfebca0b69a28f7f10ad27decdb25f5e7",
-  "notes": "v0.11.2: reliable service shutdown on app quit, signed-in front-page sync, crash-dialog fixes, and a slimmer serve-only service binary",
+  "sha256": "6409aafc082db84a45beaec08dc372f63d88b1e70f9dc6425dd1d2919760832a",
+  "notes": "v0.11.2: reliable service shutdown on app quit, signed-in front-page sync, crash-dialog fixes, working update downloads, and a slimmer serve-only service binary",
   "page": "https://jawned.github.io/shortform-forever-site/",
   "portable": {
     "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.2/ShortformForever-Portable-0.11.2.zip",
-    "sha256": "17e708226245bb51df2286f31bb09cc17b5ac13e45639626fd828eb58bd0e75a"
+    "sha256": "d5b6b173b7ebea246d365ba1c929fd5b82de0282345e0b9c76ce6884780f889b"
   }
 }
