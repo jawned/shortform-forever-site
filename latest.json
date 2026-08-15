@@ -1,11 +1,11 @@
 {
-  "version": "0.11.2",
-  "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.2/ShortformForever-Setup-0.11.2.exe",
-  "sha256": "6409aafc082db84a45beaec08dc372f63d88b1e70f9dc6425dd1d2919760832a",
-  "notes": "v0.11.2: reliable service shutdown on app quit, signed-in front-page sync, crash-dialog fixes, working update downloads, and a slimmer serve-only service binary",
+  "version": "0.11.3",
+  "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.3/ShortformForever-Setup-0.11.3.exe",
+  "sha256": "015002fdc12ca69de5a7b7db5e21e6d6b3980b901823513c9780b820943c957c",
+  "notes": "v0.11.3: first Mac release, cross-install license discovery, post-sync status pill and TikTok window-close fixes",
   "page": "https://jawned.github.io/shortform-forever-site/",
   "portable": {
-    "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.2/ShortformForever-Portable-0.11.2.zip",
-    "sha256": "d5b6b173b7ebea246d365ba1c929fd5b82de0282345e0b9c76ce6884780f889b"
+    "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.3/ShortformForever-Portable-0.11.3.zip",
+    "sha256": "4e606d57148f6390affe8e9aaaf27bcfac708e861c67806a1ea5ae46a859bd66"
   }
 }
