@@ -1,11 +1,11 @@
 {
   "version": "0.11.3",
   "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.3/ShortformForever-0.11.3-mac-arm64.dmg",
-  "sha256": "0a3fb08778f641392cc959f9eec0fceca143ddc9f05325b689289af5b22f27fd",
+  "sha256": "bc296190027921b4f503f43bf0ddf25c090fded710138a625962325eb96cc737",
   "notes": "",
   "page": "https://jawned.github.io/shortform-forever-site/",
   "zip": {
     "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.3/ShortformForever-0.11.3-mac-arm64.zip",
-    "sha256": "15c28b045befa4da5e861afbba43949ebd3278920c957296da049e3f34340fa2"
+    "sha256": "ddf5b01765af33332fe888a04f1de01703326f2c2d5d7f91b0c9a876652e4eef"
   }
 }
