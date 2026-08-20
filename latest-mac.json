@@ -1,11 +1,11 @@
 {
-  "version": "0.11.4",
-  "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.4/ShortformForever-0.11.4-mac-arm64.dmg",
-  "sha256": "ff3b100bbe11a28c086dd2ff9054b738713fcf1198beee1f904067f4b0eeb991",
-  "notes": "v0.11.4 (Mac prerelease): Chrome extension retired at full depth \u2014 the desktop app is the only sync path; lapsed-license settings no longer stranded (Auto-sync stays turn-off-able, Reset to free defaults)",
+  "version": "0.11.5",
+  "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.5/ShortformForever-0.11.5-mac-arm64.dmg",
+  "sha256": "f6a87614daa5ab68de119e1181ec232bc0b05167aaaed6c83ed2506b91e08610",
+  "notes": "v0.11.5 (Mac): native in-app dialogs with a loading screen, plus smoother scrolling of large archives and interaction polish.",
   "page": "https://jawned.github.io/shortform-forever-site/",
   "zip": {
-    "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.4/ShortformForever-0.11.4-mac-arm64.zip",
-    "sha256": "1906079ba3a7d2964a42a292e7b7ee170a27d521141c12d4ce166946c5c84cad"
+    "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.5/ShortformForever-0.11.5-mac-arm64.zip",
+    "sha256": "7c81ddf35323935744c98d518cd09eb3a7a1ade609bc3f65821f1d7b5eeb2518"
   }
 }
