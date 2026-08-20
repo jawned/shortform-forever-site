@@ -1,11 +1,11 @@
 {
-  "version": "0.11.4",
-  "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.4/ShortformForever-Setup-0.11.4.exe",
-  "sha256": "b83353f34e8cee38600ea9364c97c49cc3516e9867c882ff34c825288c117c7f",
-  "notes": "",
+  "version": "0.11.5",
+  "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.5/ShortformForever-Setup-0.11.5.exe",
+  "sha256": "164b9a092440082bc5dec53bef6a307ed55dcbcc2192b10c3821812e6dddd651",
+  "notes": "v0.11.5 (Windows): silent background updates that install and relaunch automatically, native in-app dialogs with a loading screen, plus smoother scrolling of large archives and interaction polish.",
   "page": "https://github.com/jawned/shortform-forever-site/releases/latest",
   "portable": {
-    "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.4/ShortformForever-Portable-0.11.4.zip",
-    "sha256": "cbbe4e72f5688bd9acc124f42e472f98f391d3cb6c41840deadebd00d11d1df2"
+    "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.5/ShortformForever-Portable-0.11.5.zip",
+    "sha256": "9c3c93516c2d7eec2156a2d3b098324a3ea6ffd73698583d3880cf096f4216cc"
   }
 }
