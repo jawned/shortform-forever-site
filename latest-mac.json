@@ -3,7 +3,7 @@
   "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.5/ShortformForever-0.11.5-mac-arm64.dmg",
   "sha256": "f6a87614daa5ab68de119e1181ec232bc0b05167aaaed6c83ed2506b91e08610",
   "notes": "v0.11.5 (Mac): native in-app dialogs with a loading screen, plus smoother scrolling of large archives and interaction polish.",
-  "page": "https://jawned.github.io/shortform-forever-site/",
+  "page": "https://github.com/jawned/shortform-forever-site/releases/latest",
   "zip": {
     "url": "https://github.com/jawned/shortform-forever-site/releases/download/v0.11.5/ShortformForever-0.11.5-mac-arm64.zip",
     "sha256": "7c81ddf35323935744c98d518cd09eb3a7a1ade609bc3f65821f1d7b5eeb2518"
