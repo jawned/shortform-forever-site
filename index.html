@@ -218,7 +218,7 @@
       assets.forEach(function (asset) {
         var name = asset.name || "";
         var url = asset.browser_download_url;
-        if (name.indexOf("-mac-arm64.dmg") === name.length - "-mac-arm64.dmg".length) {
+        if (name.slice(-"-mac-arm64.dmg".length) === "-mac-arm64.dmg") {
           macUrl = url;
         } else if (name.indexOf("-Setup-") !== -1 && name.slice(-4) === ".exe") {
           winSetupUrl = url;
@@ -231,10 +231,7 @@
         primaryLink.href = macUrl;
       } else if (isWindows) {
         if (winSetupUrl) primaryLink.href = winSetupUrl;
-        if (winPortableUrl) {
-          var links = secondaryLinksEl.querySelectorAll("a");
-          if (links.length) links[0].href = winPortableUrl;
-        }
+        if (winPortableUrl) portableLink.href = winPortableUrl;
       } else {
         if (winSetupUrl) winSetupLink.href = winSetupUrl;
         if (winPortableUrl) winPortableLink.href = winPortableUrl;
