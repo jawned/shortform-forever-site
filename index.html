@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shortform Forever</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --card-bg: #f5f5f5;
+    --border: #e0e0e0;
+    --primary-bg: #1a1a1a;
+    --primary-fg: #ffffff;
+    --secondary-bg: #ffffff;
+    --secondary-fg: #1a1a1a;
+    --link: #1a56db;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212;
+      --fg: #e8e8e8;
+      --muted: #a0a0a0;
+      --card-bg: #1c1c1c;
+      --border: #2e2e2e;
+      --primary-bg: #e8e8e8;
+      --primary-fg: #121212;
+      --secondary-bg: #1c1c1c;
+      --secondary-fg: #e8e8e8;
+      --link: #7aa2f7;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+      sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+  }
+  main {
+    max-width: 640px;
+    width: 100%;
+    padding: 48px 24px 24px;
+    text-align: center;
+    flex: 1;
+  }
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+  }
+  p.tagline {
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+  .primary-btn {
+    display: inline-block;
+    background: var(--primary-bg);
+    color: var(--primary-fg);
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 16px;
+  }
+  .secondary-links {
+    margin-bottom: 32px;
+  }
+  .secondary-links a {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin: 0 8px;
+  }
+  .secondary-links a:hover {
+    text-decoration: underline;
+  }
+  .platform-group {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+  .platform-group h2 {
+    font-size: 1rem;
+    margin: 0 0 12px;
+    color: var(--muted);
+  }
+  .platform-group .btn-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  .btn.primary {
+    background: var(--primary-bg);
+    color: var(--primary-fg);
+  }
+  .btn.secondary {
+    background: var(--secondary-bg);
+    color: var(--secondary-fg);
+    border: 1px solid var(--border);
+  }
+  footer {
+    padding: 24px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  footer a {
+    color: var(--link);
+  }
+  #os-download {
+    display: none;
+  }
+  #both-platforms {
+    display: none;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Shortform Forever</h1>
+  <p class="tagline">
+    A local TikTok archiver for your own liked, favorited, and
+    followed-creator videos — desktop app, runs on your machine.
+  </p>
+
+  <div id="os-download">
+    <a class="primary-btn" id="primary-download-link" href="#">Download</a>
+    <div class="secondary-links" id="secondary-download-links"></div>
+  </div>
+
+  <div id="both-platforms">
+    <div class="platform-group">
+      <h2>Windows</h2>
+      <div class="btn-row">
+        <a class="btn primary" id="win-setup-link" href="#">Download for Windows (Setup)</a>
+        <a class="btn secondary" id="win-portable-link" href="#">Portable (.zip)</a>
+      </div>
+    </div>
+    <div class="platform-group">
+      <h2>macOS</h2>
+      <div class="btn-row">
+        <a class="btn primary" id="mac-dmg-link" href="#">Download for macOS (.dmg)</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="secondary-links">
+    <a href="https://github.com/jawned/shortform-forever-site/releases">All releases</a>
+  </p>
+</main>
+<footer>
+  <a href="privacy/">Privacy Policy</a>
+</footer>
+<script>
+(function () {
+  var RELEASES_PAGE = "https://github.com/jawned/shortform-forever-site/releases/latest";
+  var API_URL = "https://api.github.com/repos/jawned/shortform-forever-site/releases/latest";
+
+  var ua = navigator.userAgent || "";
+  var isMac = ua.indexOf("Mac") !== -1;
+  var isWindows = ua.indexOf("Windows") !== -1;
+
+  var osDownloadEl = document.getElementById("os-download");
+  var bothPlatformsEl = document.getElementById("both-platforms");
+  var primaryLink = document.getElementById("primary-download-link");
+  var secondaryLinksEl = document.getElementById("secondary-download-links");
+  var winSetupLink = document.getElementById("win-setup-link");
+  var winPortableLink = document.getElementById("win-portable-link");
+  var macDmgLink = document.getElementById("mac-dmg-link");
+
+  // Wire every button to the safe fallback first; resolved asset URLs
+  // overwrite these once/if the API call succeeds.
+  [primaryLink, winSetupLink, winPortableLink, macDmgLink].forEach(function (el) {
+    el.href = RELEASES_PAGE;
+  });
+
+  if (isMac) {
+    primaryLink.textContent = "Download for macOS";
+    osDownloadEl.style.display = "block";
+  } else if (isWindows) {
+    primaryLink.textContent = "Download for Windows";
+    var portableLink = document.createElement("a");
+    portableLink.href = RELEASES_PAGE;
+    portableLink.textContent = "Portable (.zip)";
+    secondaryLinksEl.appendChild(portableLink);
+    osDownloadEl.style.display = "block";
+  } else {
+    bothPlatformsEl.style.display = "block";
+  }
+
+  fetch(API_URL, { cache: "no-store" })
+    .then(function (resp) {
+      if (!resp.ok) throw new Error("bad status");
+      return resp.json();
+    })
+    .then(function (release) {
+      var assets = release.assets || [];
+      var macUrl = null, winSetupUrl = null, winPortableUrl = null;
+
+      assets.forEach(function (asset) {
+        var name = asset.name || "";
+        var url = asset.browser_download_url;
+        if (name.indexOf("-mac-arm64.dmg") === name.length - "-mac-arm64.dmg".length) {
+          macUrl = url;
+        } else if (name.indexOf("-Setup-") !== -1 && name.slice(-4) === ".exe") {
+          winSetupUrl = url;
+        } else if (name.indexOf("-Portable-") !== -1 && name.slice(-4) === ".zip") {
+          winPortableUrl = url;
+        }
+      });
+
+      if (isMac && macUrl) {
+        primaryLink.href = macUrl;
+      } else if (isWindows) {
+        if (winSetupUrl) primaryLink.href = winSetupUrl;
+        if (winPortableUrl) {
+          var links = secondaryLinksEl.querySelectorAll("a");
+          if (links.length) links[0].href = winPortableUrl;
+        }
+      } else {
+        if (winSetupUrl) winSetupLink.href = winSetupUrl;
+        if (winPortableUrl) winPortableLink.href = winPortableUrl;
+        if (macUrl) macDmgLink.href = macUrl;
+      }
+    })
+    .catch(function () {
+      // Fallback links already wired above; nothing further to do.
+    });
+})();
+</script>
+</body>
+</html>
