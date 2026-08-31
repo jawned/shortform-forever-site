@@ -90,7 +90,8 @@
     margin-bottom: 16px;
     text-align: left;
   }
-  .platform-group h2 {
+  .platform-group h2,
+  #next-steps > h2 {
     font-size: 1rem;
     margin: 0 0 12px;
     color: var(--muted);
@@ -124,6 +125,19 @@
   }
   footer a {
     color: var(--link);
+  }
+  #next-steps {
+    text-align: left;
+  }
+  #next-steps .platform-group p,
+  #next-steps .platform-group ol {
+    margin: 0;
+    color: var(--fg);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  #next-steps .platform-group ol {
+    padding-left: 20px;
   }
   #os-download {
     display: none;
@@ -165,6 +179,34 @@
   <p class="secondary-links">
     <a href="https://github.com/jawned/shortform-forever-site/releases">All releases</a>
   </p>
+
+  <section id="next-steps">
+    <h2>After you download</h2>
+    <div class="platform-group">
+      <h2>Setup vs Portable</h2>
+      <p>
+        Setup installs like a normal app and updates in place (Windows). Portable keeps
+        everything — app, archive, settings — in a <code>data</code> folder next to the
+        exe; move or delete that folder and the whole thing goes with it.
+      </p>
+    </div>
+    <div class="platform-group">
+      <h2>About the security warning</h2>
+      <p>
+        The builds are not code-signed yet. Windows SmartScreen: click "More info", then
+        "Run anyway". macOS: right-click the app and choose "Open" the first time.
+      </p>
+    </div>
+    <div class="platform-group">
+      <h2>First steps</h2>
+      <ol>
+        <li>Run the app.</li>
+        <li>In the Sync menu, choose "Open TikTok window" and sign in.</li>
+        <li>Choose "Sync now". Your liked, favorited, and followed-creator videos start
+          archiving locally.</li>
+      </ol>
+    </div>
+  </section>
 </main>
 <footer>
   <a href="privacy/">Privacy Policy</a>
